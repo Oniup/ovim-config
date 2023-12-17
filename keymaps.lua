@@ -19,6 +19,6 @@ return {
           function() require("core_plugins.dap").print_dap_lang_configurations() end
         },
       },
-    }
+    },
   },
 }
