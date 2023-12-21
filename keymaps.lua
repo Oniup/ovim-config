@@ -5,6 +5,8 @@ return {
       ["<leader>nh"] = { ":noh<cr>", desc = "Clear highlight" },
       ["<leader>d"] = { "\"_d", desc = "Delete without yanking" },
       ["<leader>c"] = { "\"_c", desc = "Delete without yanking" },
+
+      ["<leader>o"] = { "<cmd>ClangdSwitchSourceHeader<cr>", desc = "swap btw h/c" },
     },
     x = {
       ["<leader>d"] = { "\"_d", desc = "Delete without yanking" },
