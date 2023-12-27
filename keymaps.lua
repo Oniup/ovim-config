@@ -1,12 +1,17 @@
 return {
   general = {
+    i = {
+      ["jk"] = { "<ESC>", desc = "Esc into normal mode" },
+    },
+    v = {
+      ["jk"] = { "<ESC>", desc = "Esc into normal mode" },
+    },
     n = {
-      ["qq"] = { ":bdelete<cr>", desc = "Delete current buffer" },
-      ["<leader>nh"] = { ":noh<cr>", desc = "Clear highlight" },
+      ["<leader>nh"] = { "<CMD>noh<CR>", desc = "Clear highlight" },
       ["<leader>d"] = { "\"_d", desc = "Delete without yanking" },
       ["<leader>c"] = { "\"_c", desc = "Delete without yanking" },
 
-      ["<leader>o"] = { "<cmd>ClangdSwitchSourceHeader<cr>", desc = "swap btw h/c" },
+      ["<leader>o"] = { "<CMD>ClangdSwitchSourceHeader<CR>", desc = "swap btw h/c" },
     },
     x = {
       ["<leader>d"] = { "\"_d", desc = "Delete without yanking" },
@@ -18,7 +23,10 @@ return {
     ["dap"] = {
       n = {
         ["<leader>da"] = {
-          function() require("core_plugins.dap").print_dap_lang_configurations() end
+          function()
+            require("core_plugins.dap").print_dap_lang_configurations()
+          end,
+          desc = "Prints dap clang configs"
         },
       },
     },

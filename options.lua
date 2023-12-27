@@ -9,10 +9,10 @@ local vim_opts = {
   grepformat = "%f:%l:%c:%m",
   grepprg = "rg --vimgrep",
 
-  spelllang = { "en", "cjk" },   -- Enable spelling for English
-  spellsuggest = { "best", 10 }, -- Show x the best matching results
-  spell = true,                  -- Enable spell checker
-  spellcapcheck = "",            -- Don't check for capital letters
+  -- spelllang = { "en", "cjk" },   -- Enable spelling for English
+  -- spellsuggest = { "best", 10 }, -- Show x the best matching results
+  -- spell = true,                  -- Enable spell checker
+  -- spellcapcheck = "",            -- Don't check for capital letters
 
   termguicolors = true,          -- Use 24bit colors
   guicursor = "n-v-c-sm:block,i-ci-ve:hor10,r-cr-o:hor10",
