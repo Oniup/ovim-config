@@ -1,5 +1,14 @@
 local M = {}
 
+local font_for_gui = "Hasklug Nerd Font Mono:h16"
+if vim.g.neovide then
+  vim.g.neovide_remember_window_size = true
+  vim.g.neovide_cursor_animation_length = 0
+  vim.o.guifont = font_for_gui
+elseif vim.g.nvy then
+  vim.o.guifont = font_for_gui
+end
+
 local vim_opts = {
   relativenumber = true,
   clipboard = "unnamedplus",
@@ -14,9 +23,9 @@ local vim_opts = {
   -- spell = true,                  -- Enable spell checker
   -- spellcapcheck = "",            -- Don't check for capital letters
 
-  termguicolors = true,          -- Use 24bit colors
+  termguicolors = true, -- Use 24bit colors
   guicursor = "n-v-c-sm:block,i-ci-ve:hor10,r-cr-o:hor10",
-  synmaxcol = 200,               -- Don't bother syntax highlighting long lines
+  synmaxcol = 200,      -- Don't bother syntax highlighting long lines
 }
 
 vim.api.nvim_create_autocmd("BufEnter", {

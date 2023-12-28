@@ -1,5 +1,8 @@
 # Installation
 
+My custom configuration for ovim. This is setup to mainly support C++ and C#
+development on top of the lua support from the base configuration
+
 ### Windows
 
 ```bash
