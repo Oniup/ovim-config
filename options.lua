@@ -1,42 +1,15 @@
-local M = {}
-
-local font_for_gui = "Hasklug Nerd Font Mono:h16"
-if vim.g.neovide then
-  vim.g.neovide_remember_window_size = true
-  vim.g.neovide_cursor_animation_length = 0
-  vim.o.guifont = font_for_gui
-elseif vim.g.nvy then
-  vim.o.guifont = font_for_gui
-end
-
-local vim_opts = {
+local M = {
   relativenumber = true,
   clipboard = "unnamedplus",
-  belloff = "all", -- Turn the annoying bell sounds off, LEAVE ME ALONE
-  visualbell = false, -- Stop beeping for non-error errors, FFS
+  belloff = "all",
+  visualbell = false,
 
-  grepformat = "%f:%l:%c:%m",
-  grepprg = "rg --vimgrep",
-
-  -- spelllang = { "en", "cjk" },   -- Enable spelling for English
-  -- spellsuggest = { "best", 10 }, -- Show x the best matching results
-  -- spell = true,                  -- Enable spell checker
-  -- spellcapcheck = "",            -- Don't check for capital letters
-
-  termguicolors = true, -- Use 24bit colors
-  guicursor = "n-v-c-sm:block,i-ci-ve:hor10,r-cr-o:hor10",
-  synmaxcol = 200, -- Don't bother syntax highlighting long lines
+  synmaxcol = 200,
 }
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "cs",
-  callback = function()
-    vim.opt.shiftround = 4
-    vim.opt.shiftwidth = 4
-    vim.opt.tabstop = 4
-  end,
-})
-
-M.vim_opts = require("core.utils").set_term_shell(vim_opts)
+if vim.g.neovide or vim.g.nvy then
+  M.guifont = "Hasklug Nerd Font Mono:h15"
+  vim.api.nvim_set_current_dir(vim.env.HOME)
+end
 
 return M
