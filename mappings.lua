@@ -13,17 +13,6 @@ M.general = {
   },
 }
 
-M.dap = {
-  n = {
-    ["<leader>da"] = {
-      function()
-        require("config.plugins.dap").print_dap_lang_configurations()
-      end,
-      desc = "Prints dap clang configs",
-    },
-  },
-}
-
 M.neogen = {
   n = {
     ["<leader>nf"] = {

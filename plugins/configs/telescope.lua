@@ -4,6 +4,7 @@ local actions = require("telescope.actions")
 
 M.opts = {
   defaults = {
+    layout_strategy = "horizontal",
     mappings = {
       i = {
         ["<C-l>"] = actions.select_vertical,
