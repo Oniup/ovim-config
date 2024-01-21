@@ -1,7 +1,7 @@
 return {
-  {
-    "Civitasv/cmake-tools.nvim",
-    name = "cmake-tools",
-    cmd = { "CMakeBuild", "CMakeGenerate", "CMakeSelectKit" },
-  },
+    {
+        "Civitasv/cmake-tools.nvim",
+        name = "cmake-tools",
+        cmd = { "CMakeBuild", "CMakeGenerate", "CMakeSelectKit" },
+    },
 }
