@@ -13,19 +13,6 @@ M.general = {
     },
 }
 
-M.telescope = {
-    n = {
-        ["<leader>fi"] = {
-            "<cmd> Telescope find_files no_ignore=true <cr>",
-            "Find file",
-        },
-        ["<leader>fg"] = {
-            "<cmd> Telescope live_grep no_ignore=true <cr>",
-            "Live grep",
-        },
-    },
-}
-
 M.neogen = {
     n = {
         ["<leader>nf"] = {
