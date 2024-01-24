@@ -24,6 +24,12 @@ M.neogen = {
     },
 }
 
+M["cmake-tools"] = {
+    n = {
+        ["<C-b>"] = { "<cmd> CMakeBuild <cr>" },
+    },
+}
+
 M.lsp_clangd = {
     n = {
         ["<leader>o"] = { "<cmd> ClangdSwitchSourceHeader <cr>", "Swap between header and source" },
