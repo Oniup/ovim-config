@@ -24,7 +24,7 @@ M.neogen = {
     },
 }
 
-M["cmake-tools"] = {
+M["cmake_tools"] = {
     n = {
         ["<C-b>"] = { "<cmd> CMakeBuild <cr>" },
     },

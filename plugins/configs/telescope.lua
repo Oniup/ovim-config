@@ -15,6 +15,12 @@ M.opts = {
                 ["<C-j>"] = actions.select_horizontal,
             },
         },
+        file_ignore_patterns = vim.list_extend({
+            "bin",
+            "vender",
+            "deps",
+            "dependencies",
+        }, require("plugins.configs.telescope").opts.defaults.file_ignore_patterns),
     },
 }
 
