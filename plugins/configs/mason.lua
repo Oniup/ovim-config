@@ -5,7 +5,6 @@ M.opts = {
         "clangd",
         "codelldb",
         "cmake-language-server",
-        "zls",
     }, require("plugins.configs.mason").opts.ensure_installed),
 }
 
